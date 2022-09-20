@@ -1,3 +1,4 @@
 # 20220919 git 생성
 # HTML 
-## tag(태그)
+## 태그(tag)
++ 표준 : https://html.spec.whatwg.org/multipage/
