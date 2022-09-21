@@ -1,0 +1,19 @@
+body{
+    background-color:whitesmoke
+}
+#navi{
+    padding-left: 10px;
+    list-style: none;
+}
+h1 {
+    color: navy;
+    font-style:italic;  
+}
+a:hover {
+    background-color: black;
+}
+
+ul {
+    
+    border-bottom-style: solid;
+}

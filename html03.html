@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<html></html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시맨틱 태그</title>
+    <style>
+        /* 내부스타일
+       {
+        margin: 0px;
+        padding: 5px;
+      }
+      /* 태그선택자 */
+        ul {
+            background-color: blanchedalmond;
+            list-style: none;
+            padding-left: 0px;
+        }
+
+        header {
+            background-color: blue;
+            color: white;
+            padding: 15px;
+            height: auto;
+            width: auto;
+            margin: 20px 10px 30px 50px;
+            border: 5px;
+            border-color: black;
+            border-style: dashed;
+
+        }
+
+        /* 클래스선택자 */
+        .idc1 {
+            color: blueviolet;
+            background-color: rgb(138, 138, 221);
+        }
+
+        .idca1 {
+            background-color: thistle;
+        }
+
+        /* 아이디선택자 */
+        #sid1 {
+            background-color: rgb(144, 235, 227);
+            border-left: 10px rgb(96, 96, 196);
+            border-style: solid;
+            padding: 5px;
+        }
+
+        /* 복합선택자 */
+        header,
+        footer {
+            background-color: rgb(199, 191, 245);
+        }
+
+        nav>ul {
+            background-color: rgb(151, 119, 58);
+        }
+
+        .side4 ul {
+            background-color: aquamarine;
+        }
+
+        section[id] {
+            color: red
+        }
+
+        /* 가상선택자 */
+        a {
+            text-decoration: none;
+            color: white;
+
+        }
+
+        a:hover {
+            background-color: black;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        이창현
+    </header>
+    <nav>
+        <ul id="">
+            <li><a href="#sid1">개인정보</a></li>
+            <li><a href="#sid2">학력사항</a></li>
+            <li><a href="#sid3">자격증</a></li>
+            <li><a href="#sid4">사용가능언어</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <section id="sid1">
+            <h1>개인정보</h1>
+            <ul>
+                <li class="idc1"></li>
+                <li class="idc2"></li>
+            </ul>
+        </section>
+        <section id="sid2">
+            <h1>학력사항</h1>
+            <ul>
+                <li class="idc1"></li>
+                <li class="idc2"></li>
+            </ul>
+        </section>
+        <section id="sid3">
+            <h1>자격증</h1>
+            <ul>
+                <li class="idc1"></li>
+                <li class="idc2"></li>
+            </ul>
+        </section>
+        <section id="sid4">
+            <h1>사용가능언어</h1>
+            <ul>
+                <li class="idca1"></li>
+                <li class="idca2"></li>
+            </ul>
+        </section>
+
+    </aside>
+    <footer>
+        k디지털(부산대학교)
+    </footer>
+
+</body>
+
+</html>
