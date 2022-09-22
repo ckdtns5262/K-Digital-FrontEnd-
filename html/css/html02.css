@@ -10,10 +10,19 @@ h1 {
     font-style:italic;  
 }
 a:hover {
-    background-color: black;
+    color: yellowgreen;
+    text-decoration: underline;
 }
 
 ul {
-    
     border-bottom-style: solid;
+    
+}
+
+a:link {
+    color: white;
+}
+li {
+   padding: 4px;
+   
 }
