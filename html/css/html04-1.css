@@ -1,0 +1,58 @@
+/* 전체 적용 */
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+/* 레이아웃 */
+nav {
+    background-color: wheat;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    height: 40px;
+}
+
+main {
+    background-color: rgb(238, 241, 255);
+    display: flex;
+    font-family: 'Nanum Brush Script', cursive;
+
+}
+
+main>section {
+    width: 25%;
+    margin: 20px;
+    text-align: center;
+}
+
+img {
+    border-radius: 30%;
+}
+
+footer {
+    background-color: rgb(170, 196, 255);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Noto Serif KR', serif;
+}
+
+
+ul>li {
+    list-style: none;
+    float: left;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.menu2 {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    float: left;
+
+}
