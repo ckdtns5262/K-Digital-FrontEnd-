@@ -1,0 +1,20 @@
+header {
+    background-color: rgb(177, 178, 255);
+    font-family: 'Nanum Brush Script', cursive;
+    font-size: 20px;
+}
+  
+  header > section {
+    display: flex; 
+  }
+  .header_left, .header_right {
+    margin: 20px;
+  }
+  .header_left {
+    width: 30%;
+    text-align: center; 
+    font-size: 2em;
+  }
+  .header_right {
+    width: 70%;
+  }

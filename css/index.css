@@ -1,0 +1,83 @@
+/*전체 적용 */
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  /*레이아웃*/
+  nav {
+    background-color: wheat;
+    padding: 12px;
+    display: flex;
+    justify-content:space-between;
+    color : white;
+    height: 40px;
+    top : 0;
+    position: sticky;
+  }
+  
+  nav > ul {
+    display: flex;
+    list-style: none;
+  }
+ 
+  main {
+    display: flex;
+    font-family: 'Nanum Brush Script', cursive;
+    background-color: rgb(238, 241, 255);
+  }
+  main>section {
+    width: 25%;
+    margin: 20px;
+    text-align: center;
+  }
+  img {
+    border-radius: 50%;
+  }
+  
+  footer {
+    background-color: rgb(170, 196, 255);
+    display: flex;
+    font-family: 'Noto Serif KR', serif;
+    color: #FFE6F7;
+    bottom : 0;
+    position: sticky;
+  }
+  
+  footer > h2, footer > ul {
+    margin: 10px;
+  }
+  
+  footer > ul {
+    list-style: none;
+  }
+  
+
+  ::selection {
+    color: #666;
+    background: #efefef;
+}
+@media only screen and (max-width:600px) {
+    header > section {
+      flex-direction:column ;
+      align-items :center;
+    }
+    .header_left, .header_right {
+      width : 80%;
+      
+    }
+    main {
+        background-color: rgb(238, 241, 255);
+      flex-direction:column ;
+      align-items :center;
+      font-family: 'Nanum Brush Script', cursive;
+    }
+    main>section {
+      width: 80%; 
+      text-align: center;
+    }
+  
+    footer > ul {
+      display: none;
+    }
+  } 
