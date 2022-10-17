@@ -2,7 +2,9 @@
   margin: 0px;
   padding: 0px;
 }
-a { text-decoration:none;
+a { 
+  text-decoration:none;
+  color: black;
 
 }
 a :visited {
@@ -63,11 +65,9 @@ a :visited {
   border-radius: 20px;
   padding: 10px;
   font-weight: bold;
-
- 
 }
 h1 {
-  background-color: black;
+  background-color: #738A9B;
   color: white;
   text-align: center;
   padding: 10px;
@@ -102,3 +102,4 @@ li a :hover {
   transform: translateY(-3px);
   transform: translateY(-6px);
 }
+
