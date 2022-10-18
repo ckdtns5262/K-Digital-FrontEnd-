@@ -2,6 +2,7 @@ import data from'../jsonData/MvInfo.json';
 
 function MyObject() {
 
+
   //object 순회 : key값 가져오기
   // for(let a in data) {
   //   console.log('key :', a)   
@@ -17,7 +18,6 @@ function MyObject() {
   // 영화정보 추출
   const myInfo = data.movieInfoResult.movieInfo;
  
-
   //object 순회 : in key를 가져오는 것(배열X)
   // for(let a in myInfo){
   //   console.log("key :", a)
@@ -56,13 +56,14 @@ function MyObject() {
   
 
 
-
   return (<>
   <h1>Object 연습</h1>
     
   <ul>
     {ac}
   </ul>
+
+
   </>
 
 )}
