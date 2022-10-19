@@ -102,4 +102,7 @@ li a :hover {
   transform: translateY(-3px);
   transform: translateY(-6px);
 }
-
+.form1 {
+  display: flex;
+  justify-content: center;
+}

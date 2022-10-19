@@ -1,7 +1,7 @@
-import './App.css';
+import './components/My06.css';
 import MyCom from './components/MyCom'; 
 
-function App() {
+function App01() {
   let mv = [
     {
       "rnum": "1",
@@ -213,4 +213,4 @@ function App() {
   );
 }
 
-export default App;
+export default App01;

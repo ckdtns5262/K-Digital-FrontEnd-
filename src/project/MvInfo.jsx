@@ -1,11 +1,12 @@
 // useState Hook
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import mv from '../jsonData/MvInfo.json';
 import '../project/MvInfo.css'
 import MvTimer from './MvTimer';
 
 function MvInfo() {
   
+  //state 변수
   const [Like, setLike] = useState(0);
   const [dLike, setdLike] =useState(0); 
 
@@ -78,6 +79,11 @@ function MvInfo() {
   //state 변수
   let [cntUpSt, setcntUpSt] = useState(0);
   let [cntDownSt, setcntDownSt] = useState(0);
+  const [on, setOn] = useState(false)
+  const [flag, setFlag] =useState(true)
+  const [detail, setDetail] = useState(false) 
+  const [txt1, setTxt1] = useState([]);
+
 
 
   const handleUp = () =>{
@@ -100,55 +106,87 @@ function MvInfo() {
   // useEffect Hook : 랜더링시 매번 발생
   useEffect(()=>{
     console.log('useEffect 랜더링 발생시 계속 수행')
+    console.log(cntRef.current)
   })
   // useEffect Hook : 컴포넌트 발생시 한번 발생
   useEffect(()=>{
     console.log('useEffect 컴포넌트 발생시 한번 발생')
+    console.log('ref cnt:', cntRef.current); // useRef로 생성된 것은 object 타입이라서 .current 붙여줘야함
+    txtRef.current.focus();
+
   }, [])
   // useEffect Hook : 관련state변수가 변경될 때 실행
   useEffect(()=>{
     console.log('useEffect 관련state변수가 변경될 때 실행')
-  }, [cntUpSt])
+  }, [cntUpSt, detail])
 
   
-  const [on, setOn] = useState(false)
-  const [flag, setFlag] =useState(false)
-  const [show, setShow] = useState(false)
-  const [detail, setDetail] = useState(true)  
+ 
+
+  // ref 변수
+  const cntRef = useRef(0);
+  const txtRef = useRef();
   
   // 시계아이콘을 클릭하면 flag 변수 변경
-  const showTimer = ()=> {
-    setOn(!on)
-    setFlag(flag === 'none' ? 'inline-flex' : 'none')
-  }  
-  const showLike = ()=>{
-    setShow(!show)
-  }
+  // const showTimer = ()=> {
+  //   setOn(!on)
+  //   setFlag(flag === 'none' ? 'inline-flex' : 'none')
+  //   // console.log(cntRef.current)
+  
+  // }  
+  // const showLike = ()=>{
+  //   setShow(!show)
+  // }
   const showDetail = () => {
     setDetail(!detail)
   }
+  //form submit 
+  const handleSubmit = (e)=>{
+    e.preventDefault(); // 재렌더링이 되는것을 막아주려고 사용
+    console.log(txtRef.current.value)
+    setTxt1([<li key={txtRef.current.value} className="refLi">
+      {txtRef.current.value}
+      </li>, ...txt1])
+  }
+
+
 
 
   return (<>
       <h1>영화상세</h1>
-      <button onClick={showDetail}>상세보기</button>
-    { detail && <div className='content'>
+       <button onClick={showDetail} className="btn btn-warning">접기</button>
+     { !detail && <div className='content'>
     <ul>
       {lis}
-      <button onClick={showLike}>버튼</button>
-      { show && <div className='likes'>
+      {/* <button onClick={showLike}>버튼</button> */}
+     <div className='likes'>
       {/* <span onClick={()=>{setLike(Like + 1)}}>👍</span>{Like}
       <span onClick={()=>{setdLike(dLike + 1)}}>👎</span>{dLike} */}
       <span onClick={handleUp}>👍</span>{ "좋아요 갯수 : " + cntUpSt }
       <span onClick={handlDown}>👎</span>{"싫어요 갯수 : " + cntDownSt}
-      <span onClick={showTimer}>⏰</span>
-      </div>}
+      {/* <span onClick={setFlag(!flag)}>⏰</span> */}
+      </div>
     </ul>
     </div>}
     {/* true , false를 이용하여 useState 조절*/}
     <div className='timer'>
-    {on && <MvTimer/>}
+    {/* { flag === true ? <MvTimer/> : ""} */}
     </div>
+      <form className='mvForm' onSubmit={handleSubmit}>
+        <div className='likes'>
+        <textarea type="text" ref={txtRef} placeholder='댓글을 입력하세요.'></textarea>
+        </div>
+        <div className='but'>
+        <button type="submit" className="btn btn-primary">등록</button>
+        <button type='reset'className="btn btn-danger">취소</button>
+        </div>
+      </form>
+      <div className='content'>
+        <ul>        
+        {txt1}
+        </ul>
+      </div>
+   
 
     {/* style로 useState 조절*/}
       {/* <div className='timer' style={{'display' : flag}}>
