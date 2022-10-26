@@ -1,15 +1,25 @@
-import React from 'react'
+
 import './components/My06.css';
-import MyItem from './project/MyItem';
+import { Route,Routes } from 'react-router-dom';
+import MvList26 from './project/MvList26';
+import MvInfoMain26 from './project/MvInfoMain26'
+
 
 
 
 function App() {
 
+  
+  
   return (
     <>
-   <MyItem/>
-    </>
+   <Routes>
+    <Route path='/' element={<MvList26/>}/>
+    <Route path='/MvInfoMain26/:mvcd' element={<MvInfoMain26/>}/>
+   </Routes>
+  
+   
+   </>
   );
 }
 

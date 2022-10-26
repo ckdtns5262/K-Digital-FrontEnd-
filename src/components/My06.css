@@ -25,12 +25,6 @@ a :visited {
 }
 
 
-.mvLiV {
-  display: inline-flex;
-  width: 50%;
-  font-size: 20px;
-  font-weight: bold;
-}
 
 
 .mvLi {
@@ -103,6 +97,11 @@ li a :hover {
   transform: translateY(-6px);
 }
 .form1 {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+}
+.put {
   display: flex;
   justify-content: center;
 }

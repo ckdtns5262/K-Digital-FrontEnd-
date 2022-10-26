@@ -79,8 +79,8 @@ function MvInfo() {
   //state 변수
   let [cntUpSt, setcntUpSt] = useState(0);
   let [cntDownSt, setcntDownSt] = useState(0);
-  const [on, setOn] = useState(false)
-  const [flag, setFlag] =useState(true)
+  // const [on, setOn] = useState(false)
+  // const [flag, setFlag] =useState(true)
   const [detail, setDetail] = useState(false) 
   const [txt1, setTxt1] = useState([]);
 

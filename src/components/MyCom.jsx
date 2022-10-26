@@ -6,7 +6,7 @@ import "../components/My06.css";
 function MyCom(props) {
 
   const [like, setLike] = useState(0);
-  const [show, setShow] = useState(true);
+
   
   let myMv = { ...props.item };
 
@@ -45,7 +45,6 @@ function MyCom(props) {
 
   return (
     <>
-     
       <div className="box1">
         <ul>{lis}</ul>
         <div className="hart">

@@ -1,5 +1,9 @@
-
-[{
+{
+  "boxOfficeResult": {
+    "boxofficeType": "일별 박스오피스",
+    "showRange": "20221018~20221018",
+    "dailyBoxOfficeList": [
+      {
         "rnum": "1",
         "rank": "1",
         "rankInten": "0",
@@ -11,11 +15,11 @@
         "salesShare": "18.5",
         "salesInten": "751919",
         "salesChange": "0.5",
-        "salesAcc": "8164396200",
+        "salesAcc": "8164361200",
         "audiCnt": "17841",
         "audiInten": "244",
         "audiChange": "1.4",
-        "audiAcc": "864462",
+        "audiAcc": "864459",
         "scrnCnt": "858",
         "showCnt": "2644"
       },
@@ -111,11 +115,11 @@
         "salesShare": "6.5",
         "salesInten": "-1262310",
         "salesChange": "-2.2",
-        "salesAcc": "5674455020",
+        "salesAcc": "5674431020",
         "audiCnt": "5762",
         "audiInten": "-43",
         "audiChange": "-0.7",
-        "audiAcc": "566575",
+        "audiAcc": "566573",
         "scrnCnt": "459",
         "showCnt": "785"
       },
@@ -198,4 +202,7 @@
         "audiAcc": "15629",
         "scrnCnt": "11",
         "showCnt": "11"
-      }]
+      }
+    ]
+  }
+}
